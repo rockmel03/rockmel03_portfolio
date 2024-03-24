@@ -1,26 +1,43 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Typing from "../components/templetes/Typing";
+import AnimatedHeading from "../components/templetes/AnimatedHeading";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
     <div>
-      <Layout className="py-0">
+      <Layout className="!py-0">
         <main className="relative w-full h-[calc(100vh-12vh)] flex  border-b-[1px] border-b-zinc-700">
           <div className="flex-1 flex flex-col justify-center items-start">
-            <h3 className="text-3xl font-bold leading-tight">
-              Hey, It's <span>me!</span>
-            </h3>
-            <h1 className="text-[5.5rem] font-gil  whitespace-nowrap font-black leading-tight">
-              Kamal Melkani
-            </h1>
-            <h2 className="text-5xl font-bold leading-tight">
-              I am a{" "}
-              <span className=" capitalize text-yellow-dark   ">
-                <Typing data={["frontend developer", "web designer"]} />
-              </span>
-            </h2>
-            <p className="text-lg my-3">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: "fit-content" }}
+              transition={{ duration: 0.5 }}
+              className="w-fit overflow-hidden"
+            >
+              <h3 className="text-3xl font-bold leading-tight  whitespace-nowrap">
+                Hey, It's <span>me!</span>
+              </h3>
+            </motion.div>
+            <AnimatedHeading
+              data="kamal melkani"
+              className={`!text-[5.3rem] whitespace-nowrap leading-tight overflow-hidden`}
+            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1 }}
+              className="w-fit overflow-hidden"
+            >
+              <h2 className="text-5xl font-bold leading-tight">
+                I am a&nbsp;
+                <span className=" capitalize text-yellow-dark   ">
+                  <Typing data={["frontend developer", "web designer"]} />
+                </span>
+              </h2>
+            </motion.div>
+            <p className="text-lg font-medium my-4">
               Passionate frontend developer crafting immersive digital
               experiences with HTML, CSS, JavaScript, and React.js. Expertise in
               bringing creativity and precision to every project. Let's build

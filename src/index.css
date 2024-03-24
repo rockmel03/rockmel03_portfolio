@@ -1,8 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;400;500;700;900&family=Rochester&display=swap");
-}
+@keyframes typewriter {
+    from {
+      opacity: 0;
+    }
+    to {
+      /* background: red; */
+      opacity: 1;
+    }
+  }

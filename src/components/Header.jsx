@@ -20,7 +20,7 @@ const Header = () => {
       <Layout className="!py-0">
         <nav className="w-full h-[12vh] p-3 flex justify-between items-center shadow-[0_1px]">
           <ul className="flex items-center justify-center gap-4">
-            {["home", "work", "about", "articles"].map((item, idx) => (
+            {["home", "projects", "about", "articles"].map((item, idx) => (
               <li
                 key={idx}
                 className="text-xl font-semibold capitalize hover:opacity-90 relative after:w-0 after:h-[.1em] after:absolute after:left-0 after:bottom-0 after:bg-dark dark:after:bg-light after:duration-300 hover:after:w-full"
