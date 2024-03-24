@@ -1,6 +1,21 @@
 import React from "react";
 import Layout from "../components/Layout";
 import AnimatedHeading from "../components/templetes/AnimatedHeading";
+import { motion } from "framer-motion";
+
+const SkillElement = ({ title, x, y }) => {
+  return (
+    <motion.h5
+      initial={{ x: 0, y: 0 }}
+      whileInView={{ x: x, y: y }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="w-fit font-semibold p-5 bg-dark text-light dark:bg-light dark:text-dark rounded-full absolute cursor-pointer"
+    >
+      {title}
+    </motion.h5>
+  );
+};
 
 const About = () => {
   return (
@@ -11,23 +26,22 @@ const About = () => {
           <div className="w-[40%]">
             <h2 className="text-2xl font-semibold">Biography</h2>
             <p className=" my-3 text-lg font-medium">
-              Hi, I'm CodeBucks, a web developer and UI/UX designer with a
-              passion for creating beautiful, functional, and user-centered
-              digital experiences. With 4 years of experience in the field. I am
-              always looking for new and innovative ways to bring my clients'
-              visions to life.
+              Hi i'm Kamal Melkani,a frontend developer , I'm passionate about
+              crafting intuitive user interfaces and seamless experiences. With
+              expertise in HTML, CSS, and JavaScript, I create visually
+              appealing and responsive websites. Constantly learning and
+              adapting to new technologies, I collaborate effectively to deliver
+              high-quality solutions that exceed client expectations.
             </p>
             <p className=" my-3 text-lg font-medium">
-              I believe that design is about more than just making things look
-              pretty – it's about solving problems and creating intuitive,
-              enjoyable experiences for users.
+              I have a strong foundation in HTML, CSS, and JavaScript, and I am
+              constantly expanding my skills by learning new frameworks and
+              technologies.
             </p>
             <p className=" my-3 text-lg font-medium">
-              Whether I'm working on a website, mobile app, or other digital
-              product, I bring my commitment to design excellence and
-              user-centered thinking to every project I work on. I look forward
-              to the opportunity to bring my skills and passion to your next
-              project.
+              My goal is to leverage my skills and passion for frontend
+              development to create impactful digital experiences and
+              continuously evolve as a professional in this dynamic industry.
             </p>
           </div>
           <div className="relative z-10 w-[25%] aspect-[3/4] rounded-[20px] border border-1 border-dark dark:border-light">
@@ -48,6 +62,19 @@ const About = () => {
               </h3>
             </div>
           </div>
+        </div>
+
+        <div className=" w-full h-screen mt-20 rounded-full flex items-center justify-center relative bg-radial-light dark:bg-radial-dark">
+          <h3 className="w-fit p-5 bg-dark text-xl font-semibold text-light  dark:bg-light dark:text-dark rounded-full capitalize  hover:scale-95">
+            skills
+          </h3>
+          <SkillElement title="HTML" x="-13vw" y=" -30vh" />
+          <SkillElement title="CSS" x="5vw" y=" -33vh" />
+          <SkillElement title="Javascript" x="22vw" y=" -22vh" />
+          <SkillElement title="GSAP" x="26vw" y=" 6vh" />
+          <SkillElement title="ScrollTrigger" x="13vw" y=" 27vh" />
+          <SkillElement title="React.js" x="-22vw" y=" 2vh" />
+          <SkillElement title="Tailwind" x="-13vw" y=" 25vh" />
         </div>
       </Layout>
     </main>
