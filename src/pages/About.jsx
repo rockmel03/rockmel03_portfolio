@@ -44,15 +44,15 @@ const About = () => {
               continuously evolve as a professional in this dynamic industry.
             </p>
           </div>
-          <div className="relative z-10 w-[25%] aspect-[3/4] rounded-[20px] border border-1 border-dark dark:border-light">
-            <div className="w-full h-full rounded-[20px] bg-yellow-500 overflow-hidden">
+          <div className="relative w-[25%] aspect-[3/4] rounded-2xl border border-1 border-dark dark:border-light bg-light dark:bg-dark">
+            <div className="w-full h-full rounded-2xl bg-yellow-500 overflow-hidden">
               <img
                 src="./dpAi.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
+              <div className="w-[100%] h-[103%] absolute -z-10 -right-3 top-0 rounded-3xl bg-dark dark:bg-light" />
             </div>
-            <div className="w-[100%] h-[100%] absolute -z-10 left-3 top-3 rounded-[30px] bg-dark dark:bg-light" />
           </div>
           <div className="w-[20%] h-full flex flex-col gap-16 items-end justify-between">
             <div className="flex flex-col items-center gap-5">

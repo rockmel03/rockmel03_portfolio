@@ -9,7 +9,7 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <div className="w-full min-h-screen font-mont bg-light text-dark dark:bg-black dark:text-white">
+    <div className="w-full min-h-screen font-mont ">
       <Header />
       <Routes>
         <Route path="/" element={<Home />}></Route>

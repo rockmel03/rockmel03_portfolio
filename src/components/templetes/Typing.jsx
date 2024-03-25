@@ -30,7 +30,7 @@ const Typing = ({ data = ["Developer", "Designer", "Editor"] }) => {
   }, []);
 
   return (
-    <span className="relative inline-block pr-1 after:w-[.1em] after:h-full after:absolute after:left-full after:bg-zinc-500 after:opacity-0 after:animate-[pulse_.5s_infinite_linear]">
+    <span className="relative inline-block whitespace-nowrap pr-1 after:w-[.1em] after:h-full after:absolute after:left-full after:bg-zinc-500 after:opacity-0 after:animate-[pulse_.5s_infinite_linear]">
       {heading}
     </span>
   );

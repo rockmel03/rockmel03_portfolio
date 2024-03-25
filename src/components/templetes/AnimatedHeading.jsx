@@ -4,7 +4,7 @@ import React from "react";
 const AnimatedHeading = ({ data, className }) => {
   console.log(stagger(0.1, { startDelay: 0.15 }));
   return (
-    <h1 className={`text-8xl text-center font-black capitalize ${className}`}>
+    <h1 className={`text-8xl text-center font-bold capitalize ${className}`}>
       {data.split(" ").map((item, idx) => (
         <motion.span
           initial={{ y: 50, opacity: 0 }}

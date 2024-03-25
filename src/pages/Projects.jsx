@@ -11,7 +11,7 @@ const FeatureProject = ({
   github,
 }) => {
   return (
-    <article className="relative  p-10 w-full flex items-center justify-between gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark shadow-md shadow-dark ">
+    <article className="relative  p-10 w-full flex items-center justify-between gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark dark:border-light shadow-md shadow-dark dark:shadow-light">
       <div className="absolute -z-10 -right-3 top-3 w-full h-full  bg-dark dark:bg-light rounded-3xl" />
       <a
         href={link}
@@ -45,7 +45,7 @@ const FeatureProject = ({
 };
 const Project = ({ title = "", description = "", img, link, github }) => {
   return (
-    <article className="relative  p-10 w-full flex flex-col gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark shadow-md shadow-dark ">
+    <article className="relative  p-10 w-full flex flex-col gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark dark:border-light shadow-md shadow-dark dark:shadow-light">
       <div className="absolute -z-10 -right-3 top-3 w-full h-full  bg-dark dark:bg-light rounded-3xl" />
       <a
         href={link}
