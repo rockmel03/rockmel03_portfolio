@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import AnimatedHeading from "../components/templetes/AnimatedHeading";
 import { GithubIcon } from "../components/Icons";
+import ShadowCard from "../components/templetes/ShadowCard";
 
 const FeatureProject = ({
   title = "",
@@ -11,8 +12,9 @@ const FeatureProject = ({
   github,
 }) => {
   return (
-    <article className="relative  p-10 w-full flex items-center justify-between gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark dark:border-light shadow-md shadow-dark dark:shadow-light">
-      <div className="absolute -z-10 -right-3 top-3 w-full h-full  bg-dark dark:bg-light rounded-3xl" />
+    <ShadowCard
+      className={`p-10 w-full flex items-center justify-between gap-10 `}
+    >
       <a
         href={link}
         target="_blank"
@@ -40,13 +42,12 @@ const FeatureProject = ({
           </a>
         </div>
       </div>
-    </article>
+    </ShadowCard>
   );
 };
 const Project = ({ title = "", description = "", img, link, github }) => {
   return (
-    <article className="relative  p-10 w-full flex flex-col gap-10 rounded-3xl text-dark dark:text-light  bg-light dark:bg-dark  border border-solid border-dark dark:border-light shadow-md shadow-dark dark:shadow-light">
-      <div className="absolute -z-10 -right-3 top-3 w-full h-full  bg-dark dark:bg-light rounded-3xl" />
+    <ShadowCard className={`p-10 w-full flex flex-col gap-10 `}>
       <a
         href={link}
         target="_blank"
@@ -74,7 +75,7 @@ const Project = ({ title = "", description = "", img, link, github }) => {
           </a>
         </div>
       </div>
-    </article>
+    </ShadowCard>
   );
 };
 

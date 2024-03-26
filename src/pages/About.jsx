@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import AnimatedHeading from "../components/templetes/AnimatedHeading";
 import { motion } from "framer-motion";
+import ShadowCard from "../components/templetes/ShadowCard";
 
 const SkillElement = ({ title, x, y }) => {
   return (
@@ -44,16 +45,15 @@ const About = () => {
               continuously evolve as a professional in this dynamic industry.
             </p>
           </div>
-          <div className="relative w-[25%] aspect-[3/4] rounded-2xl border border-1 border-dark dark:border-light bg-light dark:bg-dark">
-            <div className="w-full h-full rounded-2xl bg-yellow-500 overflow-hidden">
+          <ShadowCard className={` w-[30%] aspect-[3/4] p-10`}>
+            <div className="w-full h-full rounded-xl bg-yellow-500 overflow-hidden">
               <img
                 src="./dpAi.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
-              <div className="w-[100%] h-[103%] absolute -z-10 -right-3 top-0 rounded-3xl bg-dark dark:bg-light" />
             </div>
-          </div>
+          </ShadowCard>
           <div className="w-[20%] h-full flex flex-col gap-16 items-end justify-between">
             <div className="flex flex-col items-center gap-5">
               <h1 className="text-6xl font-black">40+</h1>
