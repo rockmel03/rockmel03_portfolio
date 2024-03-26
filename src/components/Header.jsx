@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <header>
       <Layout className="!py-0">
-        <nav className="w-full h-[12vh] p-3 flex justify-between items-center shadow-[0_1px] flex-row-reverse md:flex-row">
+        <nav className="w-full h-[12vh] p-3 flex justify-between items-center border-b-[1px] flex-row-reverse md:flex-row">
           <div className="w-fit md:hidden">
             <MenuButton
               clickHandler={menuClickHandler}

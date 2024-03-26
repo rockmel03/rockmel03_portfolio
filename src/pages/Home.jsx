@@ -8,21 +8,21 @@ const Home = () => {
   return (
     <div>
       <Layout className="!py-0">
-        <main className="relative w-full h-[calc(100vh-12vh)] flex  border-b-[1px] border-b-zinc-700">
-          <div className="flex-1 flex flex-col justify-center items-start">
+        <main className="relative w-full h-[calc(100vh-12vh)] flex border-b-[1px] border-b-zinc-700 flex-col-reverse md:flex-row">
+          <div className="flex-1 flex flex-col justify-center items-center md:items-start my-5 md:my-3">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "fit-content" }}
               transition={{ duration: 0.5 }}
               className="w-fit overflow-hidden"
             >
-              <h3 className="text-3xl font-bold leading-tight  whitespace-nowrap">
+              <h3 className="font-bold leading-tight whitespace-nowrap text-xl xs:text-2xl sm:text-3xl  ">
                 Hey, It's <span>me!</span>
               </h3>
             </motion.div>
             <AnimatedHeading
               data="kamal melkani"
-              className={`!text-[5.3rem] whitespace-nowrap leading-tight overflow-hidden`}
+              className={`whitespace-nowrap leading-tight overflow-hidden text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.3rem] `}
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -30,22 +30,22 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 1 }}
               className="w-fit overflow-hidden"
             >
-              <h2 className="text-5xl font-bold leading-tight">
+              <h2 className="font-bold leading-tight text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
                 I am a&nbsp;
                 <span className=" capitalize text-yellow-dark   ">
                   <Typing data={["frontend developer", "web designer"]} />
                 </span>
               </h2>
             </motion.div>
-            <p className="text-lg font-medium my-4">
+            <p className="font-medium xs:w-[90%] text-center text-sm sm:text-base md:text-left md:text-lg  my-2 sm:my-4">
               Passionate frontend developer crafting immersive digital
               experiences with HTML, CSS, JavaScript, and React.js. Expertise in
               bringing creativity and precision to every project. Let's build
               something incredible together.
             </p>
             <div className="buttons flex items-center gap-5">
-              <button className=" text-xl font-bold bg-black  border-black text-zinc-50 dark:bg-white dark:border-white dark:text-black border-[2px] rounded-lg px-5 py-2 outline-none flex gap-3 items-center justify-center active:scale-90 duration-200">
-                Resume{" "}
+              <button className="font-bold bg-black  border-black text-zinc-50 dark:bg-white dark:border-white dark:text-black border-[2px] rounded-lg px-5 py-2 outline-none flex gap-3 items-center justify-center active:scale-90 duration-200  text-sm sm:text-base md:text-xl ">
+                Resume&nbsp;
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -59,15 +59,15 @@ const Home = () => {
                 </svg>
               </button>
               <a
-                href="/"
-                className=" text-lg font-semibold relative  after:w-0 after:h-[.1em] after:absolute after:left-0 after:bottom-0 after:bg-black dark:after:bg-white after:duration-300 hover:after:w-full"
+                href="/contact"
+                className=" text-sm sm:text-base md:text-lg  font-semibold relative  after:w-0 after:h-[.1em] after:absolute after:left-0 after:bottom-0 after:bg-black dark:after:bg-white after:duration-300 hover:after:w-full"
               >
                 Contact
               </a>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center   ">
-            <div className="w-full h-full overflow-hidden ">
+          <div className="flex-1 flex items-center justify-center sm:hidden md:flex h-1/2 md:h-auto">
+            <div className=" h-full aspect-square rounded-full overflow-hidden sm:w-full sm:h-full sm:rounded-none sm:aspect-auto">
               <img
                 src="/dpAi.png"
                 alt=""
