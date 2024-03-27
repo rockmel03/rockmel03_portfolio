@@ -9,10 +9,15 @@ const Home = () => {
     <div>
       <Layout className="!py-0">
         <main className="relative w-full h-[calc(100vh-12vh)] flex border-b-[1px] border-b-zinc-700 flex-col-reverse md:flex-row">
-          <div className="flex-1 flex flex-col justify-center items-center md:items-start my-5 md:my-3">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex-1 flex flex-col justify-center items-center md:items-start my-5 md:my-3"
+          >
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: "fit-content" }}
+              whileInView={{ width: "fit-content" }}
               transition={{ duration: 0.5 }}
               className="w-fit overflow-hidden"
             >
@@ -20,24 +25,32 @@ const Home = () => {
                 Hey, It's <span>me!</span>
               </h3>
             </motion.div>
-            <AnimatedHeading
-              data="kamal melkani"
-              className={`whitespace-nowrap leading-tight overflow-hidden text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.3rem] `}
-            />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 1 }}
+              initial={{ width: 0 }}
+              whileInView={{ width: "fit-content" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="w-fit overflow-hidden"
             >
-              <h2 className="font-bold leading-tight text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
+              <h1
+                className={`font-bold capitalize whitespace-nowrap leading-tight overflow-hidden text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.3rem] `}
+              >
+                kamal melkani
+              </h1>
+            </motion.div>
+            <motion.div
+              initial={{ x: 100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 1.2 }}
+              className="w-fit "
+            >
+              <h2 className="font-bold leading-tight text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] ">
                 I am a&nbsp;
                 <span className=" capitalize text-yellow-dark   ">
                   <Typing data={["frontend developer", "web designer"]} />
                 </span>
               </h2>
             </motion.div>
-            <p className="font-medium xs:w-[90%] text-center text-sm sm:text-base md:text-left md:text-lg  my-2 sm:my-4">
+            <p className="font-medium xs:w-[90%] text-center text-xs xs:text-sm sm:text-base md:text-left md:text-lg  my-2 sm:my-4">
               Passionate frontend developer crafting immersive digital
               experiences with HTML, CSS, JavaScript, and React.js. Expertise in
               bringing creativity and precision to every project. Let's build
@@ -65,8 +78,13 @@ const Home = () => {
                 Contact
               </a>
             </div>
-          </div>
-          <div className="flex-1 flex items-center justify-center sm:hidden md:flex h-1/2 md:h-auto">
+          </motion.div>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeIn" }}
+            className="flex-1 flex items-center justify-center sm:hidden md:flex h-1/2 md:h-auto"
+          >
             <div className=" h-full aspect-square rounded-full overflow-hidden sm:w-full sm:h-full sm:rounded-none sm:aspect-auto">
               <img
                 src="/dpAi.png"
@@ -74,7 +92,7 @@ const Home = () => {
                 className="w-full h-full object-cover pointer-events-none"
               />
             </div>
-          </div>
+          </motion.div>
         </main>
       </Layout>
     </div>
