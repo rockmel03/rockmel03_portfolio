@@ -4,7 +4,9 @@ import React from "react";
 const AnimatedHeading = ({ data, className }) => {
   console.log(stagger(0.1, { startDelay: 0.15 }));
   return (
-    <h1 className={`text-center font-bold capitalize ${className}`}>
+    <h1
+      className={` font-bold capitalize text-[13vw] xs:text-6xl md:text-8xl lg:text-8xl leading-[1.2] text-center ${className}`}
+    >
       {data.split(" ").map((item, idx) => (
         <motion.span
           initial={{ y: 50, opacity: 0 }}
@@ -12,7 +14,7 @@ const AnimatedHeading = ({ data, className }) => {
           transition={{
             duration: 0.5,
             ease: "easeOut",
-            delay: 0.5 + idx * 0.2,
+            delay:  idx * 0.2,
           }}
           key={idx}
           className="inline-block"
